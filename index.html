@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rapgro MedTech – RCM & Denial Resolution Solutions</title>
+    <title>US Medical Billing Guidelines – Rapgro MedTech</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -13,25 +13,18 @@
             --light-blue: #E8F0FE;
             --white: #FFFFFF;
             --gray-50: #F8FAFC;
-            --gray-100: #F1F5F9;
             --gray-200: #E2E8F0;
             --gray-600: #64748B;
-            --gray-700: #334155;
             --gray-900: #1E293B;
             --font-sans: 'Inter', sans-serif;
             --font-serif: 'Merriweather', serif;
             --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.1);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -86,800 +79,472 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 24px;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--gray-700);
+            color: var(--gray-600);
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.2s;
-            position: relative;
         }
 
-        nav a:hover,
-        nav a.active {
+        nav a:hover, nav a.active {
             color: var(--primary-blue);
-        }
-
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary-blue);
         }
 
         .cta-btn {
             background: var(--primary-blue);
             color: var(--white);
-            padding: 10px 28px;
+            padding: 8px 20px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
-            font-size: 0.95rem;
-            border: 2px solid transparent;
         }
 
         .cta-btn:hover {
             background: var(--dark-blue);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(26,115,232,0.3);
         }
 
-        .cta-btn.outline {
-            background: transparent;
-            color: var(--primary-blue);
-            border-color: var(--primary-blue);
+        /* PAGE TITLE */
+        .page-title {
+            padding: 60px 0 30px;
+            background: var(--light-blue);
         }
 
-        .cta-btn.outline:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-
-        /* HERO */
-        .hero {
-            padding: 80px 0 60px;
-            background: linear-gradient(145deg, var(--light-blue) 0%, var(--white) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
+        .page-title h1 {
             font-family: var(--font-serif);
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: var(--dark-blue);
-            line-height: 1.2;
-            margin-bottom: 16px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary-blue);
-        }
-
-        .hero-content p {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            margin-bottom: 32px;
-            max-width: 520px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        /* SECTION HEADERS */
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 2.25rem;
-            font-weight: 700;
+            font-size: 2.8rem;
             color: var(--dark-blue);
             margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            max-width: 700px;
+        }
+
+        /* SECTION STYLES */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-dark {
+            background: var(--gray-50);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--dark-blue);
+            margin-bottom: 12px;
         }
 
         .section-subtitle {
             color: var(--gray-600);
-            font-size: 1.05rem;
-            margin-bottom: 48px;
-            max-width: 640px;
+            margin-bottom: 32px;
         }
 
-        /* RCM CYCLE */
-        .rcm {
-            padding: 80px 0;
-            background: var(--white);
+        /* TABLES */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 24px 0;
         }
 
-        .rcm-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 16px;
-        }
-
-        .rcm-step {
-            background: var(--gray-50);
-            padding: 28px 24px;
-            border-radius: 16px;
-            border-left: 4px solid var(--primary-blue);
-            transition: all 0.3s;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .rcm-step:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-xl);
-            border-left-color: var(--dark-blue);
-        }
-
-        .rcm-step .step-number {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 4px;
-        }
-
-        .rcm-step h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: var(--gray-900);
-        }
-
-        .rcm-step p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        /* DENIAL RESOLUTION ENROLLMENT */
-        .denial-enroll {
-            padding: 80px 0;
-            background: linear-gradient(145deg, var(--light-blue), var(--white));
-        }
-
-        .enroll-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: start;
-        }
-
-        .enroll-info h3 {
-            font-family: var(--font-serif);
-            font-size: 1.6rem;
-            color: var(--dark-blue);
-            margin-bottom: 12px;
-        }
-
-        .enroll-info ul {
-            list-style: none;
-            margin-top: 16px;
-        }
-
-        .enroll-info ul li {
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--gray-700);
-        }
-
-        .enroll-info ul li i {
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-        }
-
-        .enroll-form {
-            background: var(--white);
-            padding: 36px 32px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .enroll-form h4 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--dark-blue);
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--gray-700);
-            margin-bottom: 4px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        table {
             width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--gray-200);
-            border-radius: 10px;
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            transition: border 0.2s;
-            background: var(--gray-50);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+            border-collapse: collapse;
             background: var(--white);
-        }
-
-        .form-group textarea {
-            height: 90px;
-            resize: vertical;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .enroll-form button {
-            background: var(--primary-blue);
-            color: var(--white);
-            border: none;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .enroll-form button:hover {
-            background: var(--dark-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(26,115,232,0.3);
-        }
-
-        /* SERVICES */
-        .services {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 32px;
-        }
-
-        .service-card {
-            background: var(--gray-50);
-            padding: 32px 24px;
-            border-radius: 16px;
-            text-align: center;
-            transition: all 0.3s;
             box-shadow: var(--shadow-lg);
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-card .icon {
-            font-size: 2.8rem;
-            color: var(--primary-blue);
-            margin-bottom: 16px;
-        }
-
-        .service-card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .service-card p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-        }
-
-        /* ABOUT */
-        .about {
-            padding: 80px 0;
-            background: var(--gray-50);
-        }
-
-        .about-flex {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .about-text p {
-            color: var(--gray-600);
-            margin-bottom: 16px;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 24px;
-        }
-
-        .stat {
-            text-align: center;
-            background: var(--white);
-            padding: 20px;
             border-radius: 12px;
-            box-shadow: var(--shadow-lg);
+            overflow: hidden;
         }
 
-        .stat-number {
-            font-family: var(--font-serif);
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
-        .stat-label {
-            color: var(--gray-600);
-            font-size: 0.875rem;
-        }
-
-        .about-image {
-            background: var(--light-blue);
-            border-radius: 20px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-600);
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* CONTACT */
-        .contact {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-        }
-
-        .contact-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--dark-blue);
-        }
-
-        .contact-info p {
-            color: var(--gray-600);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .contact-info p i {
-            color: var(--primary-blue);
-            width: 24px;
-            text-align: center;
-        }
-
-        .contact-info .email-highlight {
-            font-size: 1.2rem;
+        th {
+            background: var(--dark-blue);
+            color: var(--white);
+            padding: 14px 16px;
+            text-align: left;
             font-weight: 600;
-            color: var(--dark-blue);
-            background: var(--light-blue);
-            padding: 8px 16px;
-            border-radius: 8px;
-            display: inline-block;
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
+        td {
             padding: 12px 16px;
-            margin-bottom: 16px;
-            border: 1px solid var(--gray-200);
-            border-radius: 10px;
-            font-family: var(--font-sans);
-            font-size: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
             background: var(--gray-50);
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(26,115,232,0.15);
+        /* CARDS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
         }
 
-        .contact-form textarea {
-            height: 120px;
-            resize: vertical;
+        .card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-blue);
+            transition: transform 0.2s;
         }
 
-        .contact-form button {
-            background: var(--primary-blue);
-            color: var(--white);
-            border: none;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
+        .card:hover {
+            transform: translateY(-4px);
         }
 
-        .contact-form button:hover {
-            background: var(--dark-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(26,115,232,0.3);
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--dark-blue);
         }
 
-        /* FOOTER */
-        footer {
-            padding: 32px 0;
-            background: var(--dark-blue);
-            color: var(--white);
-            text-align: center;
+        .card p, .card li {
+            color: var(--gray-600);
+            font-size: 0.95rem;
         }
 
-        footer a {
-            color: #90CAF9;
-            text-decoration: none;
+        .card ul {
+            list-style: none;
+            padding-left: 0;
         }
 
-        footer p {
+        .card ul li {
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card ul li i {
+            color: var(--primary-blue);
             font-size: 0.9rem;
-            opacity: 0.9;
         }
 
-        footer .footer-email {
-            margin-top: 8px;
-            font-weight: 500;
+        /* DISCLAIMER */
+        .disclaimer {
+            background: #FFF3CD;
+            border-left: 6px solid #FFC107;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+        }
+
+        .disclaimer strong {
+            color: #856404;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
             header .container {
                 flex-direction: column;
                 gap: 12px;
             }
-
             nav ul {
-                gap: 16px;
-                flex-wrap: wrap;
+                gap: 12px;
                 justify-content: center;
-            }
-
-            .hero .container,
-            .enroll-wrapper,
-            .about-flex,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .rcm-timeline {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 1.8rem;
-            }
-
-            .enroll-form {
-                padding: 24px 16px;
-            }
-
-            .contact-form button,
-            .enroll-form button {
-                padding: 12px 20px;
             }
         }
     </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="container">
         <div class="logo-area">
-            <!-- Replace 'logo.png' with your actual logo file -->
-            <img src="logo.png" alt="Rapgro Technologies Logo">
+            <img src="logo.png" alt="Rapgro Logo">
             <span class="logo-text">Rapgro MedTech</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#rcm">RCM Cycle</a></li>
-                <li><a href="#denial">Denial Resolution</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="us-billing-guidelines.html" class="active">US Billing Guidelines</a></li>
+                <li><a href="index.html#rcm">RCM Cycle</a></li>
+                <li><a href="index.html#denial">Denial Resolution</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="#denial" class="cta-btn">Enroll Now</a>
+        <a href="index.html#denial" class="cta-btn">Enroll Now</a>
     </div>
 </header>
 
-<section class="hero">
+<!-- PAGE TITLE -->
+<section class="page-title">
     <div class="container">
-        <div class="hero-content">
-            <h1>RCM & Denial Resolution <br><span>for Healthcare Providers</span></h1>
-            <p>End-to-end Revenue Cycle Management and advanced denial resolution tools to help you maximize reimbursements and reduce claim denials.</p>
-            <div class="hero-buttons">
-                <a href="#rcm" class="cta-btn">View RCM Cycle</a>
-                <a href="#denial" class="cta-btn outline">Provider Enrollment</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <!-- Use your logo or a medical tech illustration here -->
-            <img src="logo.png" alt="Rapgro MedTech" style="max-width: 340px;">
+        <h1>US Medical Billing Guidelines</h1>
+        <p>State-wise, specialist-wise, and provider enrollment guidelines for the US healthcare system. Use this reference to stay compliant and reduce denials.</p>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="section">
+    <div class="container">
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This information is for general reference only. Billing requirements change frequently and vary by payer contract. Always consult official payer manuals, CMS guidelines, and state Medicaid websites for the most current rules.
         </div>
     </div>
 </section>
 
-<section class="rcm" id="rcm">
+<!-- STATE-WISE GUIDELINES -->
+<section class="section section-dark">
     <div class="container">
-        <h2 class="section-title">RCM Billing Cycle – Complete 7 Steps</h2>
-        <p class="section-subtitle">Our structured Revenue Cycle Management process ensures accuracy, compliance, and faster payments.</p>
-        <div class="rcm-timeline">
-            <div class="rcm-step">
-                <div class="step-number">01</div>
-                <h3>Patient Registration & Scheduling</h3>
-                <p>Efficient patient intake, demographic data capture, and appointment scheduling for seamless care.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">02</div>
-                <h3>Insurance Verification & Authorization</h3>
-                <p>Real-time eligibility checks, prior authorization, and benefit verification to reduce denials.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">03</div>
-                <h3>Charge Capture & Coding</h3>
-                <p>Accurate charge entry, ICD-10/CPT coding, and medical coding compliance for clean claims.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">04</div>
-                <h3>Claims Submission</h3>
-                <p>Timely, error-free electronic claims submission to insurance payers via clearinghouses.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">05</div>
-                <h3>Payment Posting & Denial Management</h3>
-                <p>Automated payment posting, denial tracking, and resolution with robust denial management tools.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">06</div>
-                <h3>Patient Billing & Collections</h3>
-                <p>Patient-friendly billing statements, payment plans, and collections for outstanding balances.</p>
-            </div>
-            <div class="rcm-step">
-                <div class="step-number">07</div>
-                <h3>Reporting & Analytics</h3>
-                <p>Advanced RCM analytics, dashboards, and actionable insights to optimize revenue performance.</p>
-            </div>
+        <h2 class="section-title">State-wise Billing Guidelines</h2>
+        <p class="section-subtitle">Each state has unique Medicaid billing rules, no-fault auto requirements, and commercial payer mandates.</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>State</th>
+                        <th>Key Billing Considerations</th>
+                        <th>Medicaid Website</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>California</td><td>Medi-Cal: strict prior authorization for high-cost imaging (CT/MRI). No-fault auto – 10-day filing deadline.</td><td><a href="https://www.dhcs.ca.gov" target="_blank">dhcs.ca.gov</a></td></tr>
+                    <tr><td>Texas</td><td>Texas Medicaid uses TMHP. Denial reason codes require specific appeals format. Commercial: 72-hr timely filing for ER.</td><td><a href="https://www.tmhp.com" target="_blank">tmhp.com</a></td></tr>
+                    <tr><td>Florida</td><td>Florida Medicaid – mandatory electronic submission. PIP (no-fault) requires 14-day billing window.</td><td><a href="https://www.fdoh.gov/Medicaid" target="_blank">fdoh.gov/Medicaid</a></td></tr>
+                    <tr><td>New York</td><td>NY Medicaid – eMedNY. Modifier 25 (E&M + procedure) requires detailed documentation. No-fault: 30-day deadline.</td><td><a href="https://www.emedny.org" target="_blank">emedny.org</a></td></tr>
+                    <tr><td>Illinois</td><td>HFS Medicaid – mandatory prior auth for injectables. Commercial: 120-day timely filing.</td><td><a href="https://www.hfs.illinois.gov" target="_blank">hfs.illinois.gov</a></td></tr>
+                    <tr><td>Pennsylvania</td><td>PA Medicaid – PROMISe system. Diagnosis codes must be at highest specificity.</td><td><a href="https://www.dhs.pa.gov" target="_blank">dhs.pa.gov</a></td></tr>
+                    <tr><td>Ohio</td><td>Ohio Medicaid – MCO-specific rules. Commercial: 90-day timely filing standard.</td><td><a href="https://medicaid.ohio.gov" target="_blank">medicaid.ohio.gov</a></td></tr>
+                    <tr><td>Georgia</td><td>Georgia Medicaid – 7-day DRG validation for inpatient. No-fault auto: 15-day submission.</td><td><a href="https://www.mmis.georgia.gov" target="_blank">mmis.georgia.gov</a></td></tr>
+                    <tr><td>North Carolina</td><td>NC Medicaid NCTracks – 6-month timely filing. Commercial: 90 days.</td><td><a href="https://www.nctracks.com" target="_blank">nctracks.com</a></td></tr>
+                    <tr><td>Michigan</td><td>Michigan Medicaid – CHAMPS system. Modifier 59 often flagged for bundled procedures.</td><td><a href="https://www.michigan.gov/mdhhs" target="_blank">michigan.gov/mdhhs</a></td></tr>
+                </tbody>
+            </table>
         </div>
+        <p style="color: var(--gray-600); font-size: 0.9rem;"><i class="fas fa-exclamation-circle" style="color: var(--primary-blue);"></i> For complete state guidelines, contact your state's Medicaid office or commercial payer provider manual.</p>
     </div>
 </section>
 
-<section class="denial-enroll" id="denial">
+<!-- SPECIALIST-WISE GUIDELINES -->
+<section class="section">
     <div class="container">
-        <h2 class="section-title">Denial Resolution Tools – Provider Enrollment</h2>
-        <p class="section-subtitle">Join our network of healthcare providers and leverage our advanced denial resolution platform to recover lost revenue.</p>
-        <div class="enroll-wrapper">
-            <div class="enroll-info">
-                <h3>Why Enroll with Rapgro MedTech?</h3>
+        <h2 class="section-title">Specialist-wise Billing Guidelines</h2>
+        <p class="section-subtitle">Each specialty has unique coding, modifier, and documentation requirements.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3><i class="fas fa-heart" style="color: var(--primary-blue);"></i> Cardiology</h3>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i> Real-time denial tracking and alerts</li>
-                    <li><i class="fas fa-check-circle"></i> Automated appeal letter generation</li>
-                    <li><i class="fas fa-check-circle"></i> Root cause analysis for recurring denials</li>
-                    <li><i class="fas fa-check-circle"></i> Integration with major EHR/PM systems</li>
-                    <li><i class="fas fa-check-circle"></i> Dedicated denial resolution specialists</li>
-                    <li><i class="fas fa-check-circle"></i> Up to 40% reduction in denial rates</li>
+                    <li><i class="fas fa-check"></i> CPT 93000-93015 (ECGs) – Modifier 26 for professional component only.</li>
+                    <li><i class="fas fa-check"></i> Stress tests (93015-93018) – bundled unless separate interpretation.</li>
+                    <li><i class="fas fa-check"></i> ICD-10: I25.10 (Atherosclerotic heart disease) requires laterality.</li>
+                    <li><i class="fas fa-check"></i> Prior authorization required for nuclear stress tests (78452).</li>
                 </ul>
-                <div style="margin-top: 24px;">
-                    <p style="font-weight:600; color:var(--dark-blue);">Questions? Email us at:</p>
-                    <p style="font-size:1.2rem; font-weight:500; color:var(--primary-blue);">rapgrotech@gmail.com</p>
-                </div>
             </div>
-            <div class="enroll-form">
-                <h4>Provider Enrollment Form</h4>
-                <form action="https://formspree.io/f/yourFormID" method="POST">
-                    <div class="form-group">
-                        <label>Provider / Facility Name *</label>
-                        <input type="text" name="provider_name" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Contact Person *</label>
-                            <input type="text" name="contact_person" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone *</label>
-                            <input type="tel" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address *</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Provider Type</label>
-                        <select name="provider_type">
-                            <option value="hospital">Hospital</option>
-                            <option value="clinic">Clinic</option>
-                            <option value="private_practice">Private Practice</option>
-                            <option value="dental">Dental Practice</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Current Denial Rate (Approx. %)</label>
-                        <input type="number" name="denial_rate" placeholder="e.g. 15">
-                    </div>
-                    <div class="form-group">
-                        <label>Message / Requirements</label>
-                        <textarea name="message" placeholder="Tell us about your denial management needs..."></textarea>
-                    </div>
-                    <button type="submit">Submit Enrollment Request</button>
-                </form>
+            <div class="card">
+                <h3><i class="fas fa-x-ray" style="color: var(--primary-blue);"></i> Radiology</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Global billing (professional + technical) vs. professional-only (Modifier 26).</li>
+                    <li><i class="fas fa-check"></i> Modifier 59 vs. 76/77 (repeat studies) – common source of denials.</li>
+                    <li><i class="fas fa-check"></i> Medicare: 95% of radiology services require 2 interpretation reports.</li>
+                    <li><i class="fas fa-check"></i> Prior auth for advanced imaging (CT/MRI/PET) – except for ER orders.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-kidney" style="color: var(--primary-blue);"></i> Nephrology</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CPT 90901-90935 (dialysis) – Modifier 25 for E&M on same day.</li>
+                    <li><i class="fas fa-check"></i> Chronic kidney disease (N18.3-N18.6) – specific stage coding required.</li>
+                    <li><i class="fas fa-check"></i> Medicare: ESRD PPS – bundled payments for dialysis and related labs.</li>
+                    <li><i class="fas fa-check"></i> Modifier 59 for separate lab draws on dialysis day.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-bone" style="color: var(--primary-blue);"></i> Orthopedics</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CPT 99203-99215 (E&M) – Modifier 57 (decision for surgery) is critical.</li>
+                    <li><i class="fas fa-check"></i> Fracture codes (25500, 26600) – 90-day global surgical period.</li>
+                    <li><i class="fas fa-check"></i> ICD-10 S codes (fractures) require laterality (left/right).</li>
+                    <li><i class="fas fa-check"></i> Pre-operative imaging (X-ray, MRI) – prior authorization for non-ER.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-brain" style="color: var(--primary-blue);"></i> Neurology</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CPT 95812-95822 (EEG) – Modifier 59 for separate interpretation.</li>
+                    <li><i class="fas fa-check"></i> ICD-10 G codes (epilepsy, headache) – specify chronicity and severity.</li>
+                    <li><i class="fas fa-check"></i> Medicare: 8-min rule for EMG (95860-95870) – bill per unit.</li>
+                    <li><i class="fas fa-check"></i> Prior authorization for outpatient MRI of brain/spine.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-eye" style="color: var(--primary-blue);"></i> Ophthalmology</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CPT 92012-92014 (comprehensive exam) – Modifier 25 for separate procedure.</li>
+                    <li><i class="fas fa-check"></i> ICD-10 H codes (cataract, glaucoma) – laterality required (H26.0-H26.1).</li>
+                    <li><i class="fas fa-check"></i> Medicare: Cataract surgery global period – 90 days.</li>
+                    <li><i class="fas fa-check"></i> Prior auth for OCT (92133-92134) – commercial plans often require.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-lungs" style="color: var(--primary-blue);"></i> Pulmonology</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CPT 94060 (spirometry) – Modifier 59 for separate test from E&M.</li>
+                    <li><i class="fas fa-check"></i> ICD-10 J44.9 (COPD) – requires exacerbation specifier.</li>
+                    <li><i class="fas fa-check"></i> Medicare: Bronchoscopy (31622) – prior authorization for some payers.</li>
+                    <li><i class="fas fa-check"></i> Home oxygen therapy – requires specific documentation of hypoxemia.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-tooth" style="color: var(--primary-blue);"></i> Dentistry</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> CDT codes (D0120-D9999) – Medical vs. dental billing differences.</li>
+                    <li><i class="fas fa-check"></i> Dental extractions – Modifier 25 for E&M if infection present.</li>
+                    <li><i class="fas fa-check"></i> ICD-10 K codes (oral diseases) – medical necessity for surgery.</li>
+                    <li><i class="fas fa-check"></i> Prior authorization for implants (D6010) – almost always required.</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="services" id="services">
+<!-- ENROLLMENT GUIDELINES -->
+<section class="section section-dark">
     <div class="container">
-        <h2 class="section-title">Our Core Services</h2>
-        <p class="section-subtitle">Comprehensive healthcare technology services designed for modern providers.</p>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                <h3>RCM Outsourcing</h3>
-                <p>End-to-end revenue cycle management outsourced to experts for maximum efficiency.</p>
+        <h2 class="section-title">Provider Enrollment Guidelines</h2>
+        <p class="section-subtitle">Steps to enroll with Medicare, Medicaid, and major commercial payers.</p>
+        <div class="card-grid">
+            <div class="card" style="border-left-color: #1A73E8;">
+                <h3><i class="fas fa-file-signature" style="color: #1A73E8;"></i> Medicare Enrollment</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Complete CMS-855I (individual) or CMS-855A (group).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> NPI (National Provider Identifier) – required for all claims.</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> CAQH credentialing – mandatory for most Medicare Part B.</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Revalidation every 5 years (or per MAC discretion).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> PTAN (Provider Transaction Access Number) issued after approval.</li>
+                </ul>
             </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-ban"></i></div>
-                <h3>Denial Management</h3>
-                <p>Advanced denial resolution tools, appeals management, and root cause analysis.</p>
+            <div class="card" style="border-left-color: #0D47A1;">
+                <h3><i class="fas fa-hospital" style="color: #0D47A1;"></i> Medicaid Enrollment</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #0D47A1;"></i> Apply via each state's Medicaid portal (e.g., CA eMedNY, TX TMHP).</li>
+                    <li><i class="fas fa-check-circle" style="color: #0D47A1;"></i> Medicaid specific credentialing – may require separate MCO (Managed Care Organization) contracts.</li>
+                    <li><i class="fas fa-check-circle" style="color: #0D47A1;"></i> NPI and Tax ID (EIN) required.</li>
+                    <li><i class="fas fa-check-circle" style="color: #0D47A1;"></i> Background checks and state licensing verification.</li>
+                    <li><i class="fas fa-check-circle" style="color: #0D47A1;"></i> Re-enrollment every 3–5 years (state dependent).</li>
+                </ul>
             </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-code-branch"></i></div>
-                <h3>EHR Integration</h3>
-                <p>Seamless integration of denial resolution tools with your existing EHR/PM systems.</p>
+            <div class="card" style="border-left-color: #1A73E8;">
+                <h3><i class="fas fa-building" style="color: #1A73E8;"></i> Commercial Payer Enrollment</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Credentialing via CAQH (Council for Affordable Quality Healthcare).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Payer-specific applications (Aetna, Cigna, UnitedHealthcare, Blue Cross).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Contracting – fee schedule negotiation and termination clauses.</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Re-credentialing every 3 years (most plans).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Submit via Payer's provider portal (e.g., Availity, Navinet).</li>
+                </ul>
             </div>
-            <div class="service-card">
-                <div class="icon"><i class="fas fa-chart-line"></i></div>
-                <h3>RCM Analytics</h3>
-                <p>Actionable dashboards and reports to monitor revenue performance and denial trends.</p>
+            <div class="card" style="border-left-color: #1A73E8;">
+                <h3><i class="fas fa-clipboard-list" style="color: #1A73E8;"></i> Required Documents</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Current state medical license (copy).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> DEA certificate (if prescribing).</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> NPI and EIN verification.</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Professional liability insurance certificate.</li>
+                    <li><i class="fas fa-check-circle" style="color: #1A73E8;"></i> Board certifications and education transcripts.</li>
+                </ul>
             </div>
+        </div>
+
+        <!-- ENROLLMENT TIMELINE -->
+        <div style="margin-top: 32px;">
+            <h3 style="font-family: var(--font-serif); color: var(--dark-blue); margin-bottom: 12px;">Typical Enrollment Timeline</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Step</th><th>Duration</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Credentialing (CAQH)</td><td>2–4 weeks</td></tr>
+                        <tr><td>Medicare (CMS-855)</td><td>4–8 weeks</td></tr>
+                        <tr><td>Medicaid (per state)</td><td>4–12 weeks</td></tr>
+                        <tr><td>Commercial Payer Contracting</td><td>6–12 weeks</td></tr>
+                        <tr><td>Full enrollment (all payers)</td><td>3–6 months</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: var(--gray-600); font-size: 0.9rem;"><i class="fas fa-lightbulb" style="color: var(--primary-blue);"></i> <strong>Tip:</strong> Start enrollment 4–6 months before intended start date. Delays are common.</p>
         </div>
     </div>
 </section>
 
-<section class="about" id="about">
+<!-- COMMON DENIAL REASONS (Tie-back to RCM) -->
+<section class="section">
     <div class="container">
-        <div class="about-flex">
-            <div class="about-text">
-                <h2 class="section-title">About Rapgro MedTech</h2>
-                <p>We are a healthcare technology company specializing in Revenue Cycle Management (RCM) and denial resolution solutions. With a team of experienced billing specialists, coders, and technology experts, we help providers — from small clinics to large hospitals — reduce denials, accelerate reimbursements, and improve financial performance.</p>
-                <p>Our proprietary denial resolution platform integrates with leading EHR systems to provide real-time visibility into claim statuses, denial patterns, and appeal workflows.</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Providers Enrolled</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">92%</div>
-                        <div class="stat-label">Denial Recovery Rate</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">40%</div>
-                        <div class="stat-label">Avg. Denial Reduction</div>
-                    </div>
-                </div>
+        <h2 class="section-title">Common Denial Reasons – US Outpatient</h2>
+        <p class="section-subtitle">Avoid these top denial reasons with proper documentation and coding.</p>
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="card">
+                <h4>CO-16 / CO-18</h4>
+                <p>Claim/service lacks information or has invalid diagnosis code(s).</p>
             </div>
-            <div class="about-image">
-                <div>
-                    <i class="fas fa-heartbeat" style="font-size: 4rem; color: var(--primary-blue); margin-bottom: 16px;"></i>
-                    <br>Empowering Healthcare Providers
-                </div>
+            <div class="card">
+                <h4>CO-25 / CO-27</h4>
+                <p>Procedure not covered by the patient's benefit plan / not medically necessary.</p>
+            </div>
+            <div class="card">
+                <h4>CO-22</h4>
+                <p>Payment adjusted because the claim was submitted after timely filing deadline.</p>
+            </div>
+            <div class="card">
+                <h4>CO-36</h4>
+                <p>Duplicate claim – same service date/procedure already paid.</p>
+            </div>
+            <div class="card">
+                <h4>CO-57</h4>
+                <p>Procedure/Modifier inconsistent with other procedures performed on the same day.</p>
+            </div>
+            <div class="card">
+                <h4>PR-110</h4>
+                <p>Missing prior authorization or referral.</p>
             </div>
         </div>
+        <p style="text-align: center; margin-top: 24px;">
+            <a href="index.html#denial" class="cta-btn" style="display: inline-block;">Get Denial Resolution Help</a>
+        </p>
     </div>
 </section>
 
-<section class="contact" id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-subtitle">Ready to reduce denials and optimize your RCM? Let's talk.</p>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Rapgro MedTech</h3>
-                <p><i class="fas fa-map-marker-alt"></i> D/NO 42, Subbiah Gounder St, Tatabad, Rathinapuri, Tatabad, Coimbatore, Tamil Nadu 641027</p>
-                <p><i class="fas fa-phone"></i> +91 8610367206</p>
-                <p><i class="fas fa-envelope"></i> <span class="email-highlight">rapgrotech@gmail.com</span></p>
-                <p><i class="fas fa-clock"></i> Monday – Friday, 9AM – 6PM IST</p>
-                <p style="margin-top: 16px; font-weight:500;">For enrollment or RCM support, email us directly at <strong>rapgrotech@gmail.com</strong></p>
-            </div>
-            <form class="contact-form" action="https://formspree.io/f/yourFormID" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="text" name="subject" placeholder="Subject">
-                <textarea name="message" placeholder="Tell us about your RCM or denial resolution needs" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+<!-- CONTACT / CTA -->
+<section class="section section-dark">
+    <div class="container" style="text-align: center;">
+        <h2 class="section-title">Need Help with Billing Compliance?</h2>
+        <p style="font-size: 1.1rem; color: var(--gray-600); max-width: 600px; margin: 0 auto 24px;">
+            Rapgro MedTech offers RCM outsourcing, denial resolution, and provider enrollment assistance across all 50 US states.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="mailto:rapgrotech@gmail.com" class="cta-btn"><i class="fas fa-envelope"></i> Email Us</a>
+            <a href="index.html#contact" class="cta-btn outline" style="background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue);">Contact Form</a>
         </div>
+        <p style="margin-top: 16px; color: var(--gray-600);">📧 rapgrotech@gmail.com | 📞 +91 8610367206</p>
     </div>
 </section>
 
-<footer>
+<!-- FOOTER -->
+<footer style="background: var(--dark-blue); color: white; padding: 24px 0; text-align: center;">
     <div class="container">
         <p>&copy; 2026 Rapgro MedTech. All rights reserved.</p>
-        <p class="footer-email">📧 <a href="mailto:rapgrotech@gmail.com">rapgrotech@gmail.com</a></p>
-        <p style="margin-top: 6px; font-size:0.8rem;">Powered by <a href="https://github.com" target="_blank">GitHub Pages</a></p>
+        <p style="margin-top: 4px; font-size: 0.85rem; opacity: 0.8;">Guidelines for general reference. Always verify with official payer sources.</p>
     </div>
 </footer>
 
